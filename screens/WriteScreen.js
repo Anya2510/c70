@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import {Text, View, TextInput, TouchableOpacity} from 'react-native';
+import db from '../config';
 
 export default class WriteScreen extends Component{
     constructor(){
         super()
         this.state={
-            text:''
+            text:'',
+            author:'',
+            title:'',
+            storyText:'',
+            date:''
         }
     }
     render(){
@@ -21,7 +26,7 @@ this.setState({
                 value={this.state.text}
                 />
                 <TouchableOpacity style={{backgroundColor:'black', padding:10, margin:10}}>
-                    Submit button
+                   <Text> Submit button</Text>
                 </TouchableOpacity>
                 </View>
             </View>
